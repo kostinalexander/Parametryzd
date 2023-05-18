@@ -21,38 +21,38 @@ public class CalculatorTest {
 
     @Test
     public void calculatePlusTest(){
-    String s = calculate.addition(2,5);
-    assertEquals("2 + 5 = 7",s);
+    int s = calculate.addition(2,5);
+    assertEquals(7,s);
     }
     @Test
     public void calculatePlusTest1(){
-        String s = calculate.addition(-2,5);
-        assertEquals("-2 + 5 = 3",s);
+        int s = calculate.addition(-2,5);
+        assertEquals(3,s);
     }
     @Test
     public void calculateMinusTest(){
-        String s = calculate.subtraction(4,2);
-        assertEquals("4 - 2 = 2",s);
+        int s = calculate.subtraction(4,2);
+        assertEquals(2,s);
     }
     @Test
     public void calculateMinusTes1(){
-        String s = calculate.subtraction(-4,-2);
-        assertEquals("-4 - -2 = -2",s);
+        int s = calculate.subtraction(-4,-2);
+        assertEquals(-2,s);
     }
     @Test
     public void calculateYmnozhenieTest(){
-        String s = calculate.multiplication(2,5);
-        assertEquals("2 * 5 = 10",s);
+        int s = calculate.multiplication(2,5);
+        assertEquals(10,s);
     }
     @Test
     public void calculateYmnozhenieTest1(){
-        String s = calculate.multiplication(-2,5);
-        assertEquals("-2 * 5 = -10",s);
+        int s = calculate.multiplication(-2,5);
+        assertEquals(-10,s);
     }
     @Test
     public void calculateDeleniyeTest(){
-        String s = calculate.division(4,2);
-        assertEquals("4 / 2 = 2", s);
+        int s = calculate.division(4,2);
+        assertEquals(2, s);
     }
     @Test
     public void calculateDeleniyeTest1(){

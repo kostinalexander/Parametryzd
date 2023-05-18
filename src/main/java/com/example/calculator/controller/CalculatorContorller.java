@@ -18,20 +18,20 @@ public class CalculatorContorller {
 
     @GetMapping("/plus")
     public String plus(@RequestParam int num, @RequestParam int num1){
-        return calculate.addition(num,num1);
+        return num + "+" + num1 + " = " +  calculate.addition(num,num1);
     }
     @GetMapping("/minus")
     public String minus(@RequestParam int num, @RequestParam int num1){
-        return calculate.subtraction(num,num1);
+        return num + " - "+ num1 + " = "+ calculate.subtraction(num,num1);
     }
 
     @GetMapping("/multiply")
     public String multiply(@RequestParam int num, @RequestParam int num1){
-        return calculate.multiplication(num,num1);
+        return num + " * " + num1+ " = " + calculate.multiplication(num,num1);
     }
     @GetMapping("/division")
     public String division(@RequestParam int num, @RequestParam int num1){
-        return calculate.division(num,num1);
+        return num + " / " + num1 + " = " +  calculate.division(num,num1);
     }
     @GetMapping
     public String helloCalculator(){

@@ -22,25 +22,25 @@ class CalculatorApplicationTest {
     @ParameterizedTest
     @MethodSource("params")
     public void calculatorPlusTest1(int num, int num1){
-      String s = calculate.addition(num,num1);
-      assertTrue(s.contains(calculate.addition(num,num1)));
-      assertEquals(num + " + "+ num1 + " = " + (num+num1), s);
+      Integer s = calculate.addition(num,num1);
+      assertTrue(s.equals(calculate.addition(num,num1)));
+      assertEquals((num+num1), s);
     }
 
     @ParameterizedTest
     @MethodSource("params")
     public void calculatorMinusTest1(int num, int num1){
-        String s = calculate.subtraction(num,num1);
-        assertTrue(s.contains(calculate.subtraction(num,num1)));
-        assertEquals(num + " - "+ num1 + " = " + (num-num1), s);
+        Integer s = calculate.subtraction(num,num1);
+        assertTrue(s.equals(calculate.subtraction(num,num1)));
+        assertEquals( (num-num1), s);
     }
 
     @ParameterizedTest
     @MethodSource("params")
     public void calculatorYmnozhenieTest1(int num, int num1){
-        String s = calculate.multiplication(num,num1);
-        assertTrue(s.contains(calculate.multiplication(num,num1)));
-        assertEquals(num + " * "+ num1 + " = " + (num*num1), s);
+        Integer s = calculate.multiplication(num,num1);
+        assertTrue(s.equals(calculate.multiplication(num,num1)));
+        assertEquals((num*num1), s);
     }
     @ParameterizedTest
     @MethodSource("params")
@@ -49,9 +49,9 @@ class CalculatorApplicationTest {
         assertThrows(IllegalArgumentException.class,()->calculate.division(num,0));
         return;
       }
-      String s = calculate.division(num,num1);
-        assertTrue(s.contains(calculate.division(num,num1)));
-        assertEquals(num + " / "+ num1 + " = " + (num/num1), s);
+      Integer s = calculate.division(num,num1);
+        assertTrue(s.equals(calculate.division(num,num1)));
+        assertEquals( (num/num1), s);
     }
 
 

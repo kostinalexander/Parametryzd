@@ -12,30 +12,30 @@ public class CalculateImpl implements Calculate{
     }
 
     @Override
-    public String addition(int num, int num1) {
+    public int addition(int num, int num1) {
         int result = num + num1;
-        return num + " + " + num1 + " = " + result;
+        return  result;
     }
 
     @Override
-    public String subtraction(int num, int num1) {
+    public int subtraction(int num, int num1) {
         int result = num - num1;
-        return num + " - " + num1 + " = " + result;
+        return  result;
     }
 
     @Override
-    public String multiplication(int num, int num1) {
+    public int multiplication(int num, int num1) {
         int result = num * num1;
-        return num + " * " + num1 + " = " + result;
+        return  result;
     }
 
     @Override
-    public String division(int num, int num1) {
+    public int division(int num, int num1) {
         if (num1==0){
             throw new IllegalArgumentException("Деление на 0");
         }
        int result = num / num1;
-        return num + " / " + num1 + " = " + result;
+        return  result;
         }
     }
 
